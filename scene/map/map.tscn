@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://xnt7d4t8ry36"]
+
+[ext_resource type="PackedScene" uid="uid://ctk7oa6wxq8fv" path="res://scene/utilitaire/ground.tscn" id="1_v03qa"]
+
+[node name="map" type="Node3D"]
+
+[node name="ground" parent="." instance=ExtResource("1_v03qa")]
+transform = Transform3D(4, 0, 0, 0, 0.2, 0, 0, 0, 4, 0, 0, -0.986212)
+
+[node name="ground2" parent="." instance=ExtResource("1_v03qa")]
+transform = Transform3D(4, 0, 0, 0, 0.197286, -0.656678, 0, 0.0328339, 3.94573, 0, -0.325, 2.95)
