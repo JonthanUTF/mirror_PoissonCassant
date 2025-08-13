@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bm63k3n12r4ne"]
+[gd_scene load_steps=4 format=3 uid="uid://bm63k3n12r4ne"]
 
 [ext_resource type="Script" path="res://script/utilitaire/cornichon.gd" id="1_scst4"]
 [ext_resource type="PackedScene" uid="uid://t0mrwiwgm1u6" path="res://scene/utilitaire/cornichon.tscn" id="2_i6u7x"]
+[ext_resource type="PackedScene" uid="uid://cil6kegsvw3bh" path="res://scene/player/fishing_rod/fishing_rod.tscn" id="3_7xe1a"]
 
 [node name="player" type="Node3D"]
 
@@ -11,3 +12,6 @@ script = ExtResource("1_scst4")
 [node name="Camera3D" type="Camera3D" parent="cornichon"]
 transform = Transform3D(0.707107, -0.353553, 0.612372, 0, 0.866025, 0.5, -0.707107, -0.353553, 0.612372, 4, 4, 4)
 keep_aspect = 0
+
+[node name="fishing rod" parent="cornichon" instance=ExtResource("3_7xe1a")]
+transform = Transform3D(-0.7, 3.9336e-08, -4.68788e-08, 0, 0.536231, 0.449951, 6.11959e-08, 0.449951, -0.536231, 0, 0.5, 1)

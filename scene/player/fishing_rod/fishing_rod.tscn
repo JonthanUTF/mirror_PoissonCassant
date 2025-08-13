@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://cil6kegsvw3bh"]
+
+[ext_resource type="Script" path="res://script/player/fishing_rod/fishing_rod.gd" id="1_lb4dt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fg05a"]
+albedo_color = Color(0.557646, 0.20533, 0.00420773, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_e5w6j"]
+material = SubResource("StandardMaterial3D_fg05a")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vs4nx"]
+radius = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cr8bd"]
+albedo_color = Color(1, 0.12549, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_bjcgg"]
+material = SubResource("StandardMaterial3D_cr8bd")
+radius = 0.1
+height = 0.2
+
+[node name="fishing rod" type="Node3D"]
+script = ExtResource("1_lb4dt")
+
+[node name="rodMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_e5w6j")
+
+[node name="RodTip" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="LineMesh" type="MeshInstance3D" parent="."]
+
+[node name="Bobber" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
+linear_damp = 0.2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bobber"]
+shape = SubResource("SphereShape3D_vs4nx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bobber"]
+mesh = SubResource("SphereMesh_bjcgg")

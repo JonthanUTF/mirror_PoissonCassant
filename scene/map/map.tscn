@@ -5,7 +5,7 @@
 [node name="map" type="Node3D"]
 
 [node name="ground" parent="." instance=ExtResource("1_v03qa")]
-transform = Transform3D(4, 0, 0, 0, 0.2, 0, 0, 0, 4, 0, 0, -0.986212)
+transform = Transform3D(4, 0, 0, 0, 0.2, 0, 0, 0, 4, 0, -5.96046e-08, -0.986212)
 
 [node name="ground2" parent="." instance=ExtResource("1_v03qa")]
 transform = Transform3D(4, 0, 0, 0, 0.197286, -0.656678, 0, 0.0328339, 3.94573, 0, -0.325, 2.95)
