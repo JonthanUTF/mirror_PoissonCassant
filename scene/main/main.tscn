@@ -1,15 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://dm3uedur0ahpo"]
+[gd_scene load_steps=4 format=3 uid="uid://dm3uedur0ahpo"]
 
 [ext_resource type="PackedScene" uid="uid://xnt7d4t8ry36" path="res://scene/map/map.tscn" id="1_o8x4t"]
 [ext_resource type="PackedScene" uid="uid://bm63k3n12r4ne" path="res://scene/player/player.tscn" id="2_geqdq"]
+[ext_resource type="PackedScene" uid="uid://nkcegnpcnh8w" path="res://scene/map/fishing_area.tscn" id="3_6vuhr"]
 
 [node name="main" type="Node3D"]
 
 [node name="map" parent="." instance=ExtResource("1_o8x4t")]
 
 [node name="player" parent="." instance=ExtResource("2_geqdq")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.06762, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.06762, -1.6250122)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.707107, 0.5, -0.5, 0, 0.707107, 0.707107, 0.707107, -0.5, 0.5, 0, 0, 0)
 shadow_enabled = true
+
+[node name="fishing area" parent="." instance=ExtResource("3_6vuhr")]
+transform = Transform3D(3.5, 0, 0, 0, 0.99026805, -0.2783462, 0, 0.1391731, 1.9805361, 0, 0.2015444, 1.0880101)
+csv_path = "caca"
