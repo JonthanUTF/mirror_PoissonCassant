@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://304syvevycb3"]
+
+[ext_resource type="Script" uid="uid://chj1cq5rc2fp7" path="res://script/player/fishing_rod/fishing_system.gd" id="1_jlm1m"]
+
+[node name="fishing_system" type="Node3D"]
+script = ExtResource("1_jlm1m")
+
+[node name="catch" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0

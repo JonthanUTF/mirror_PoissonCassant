@@ -1,0 +1,26 @@
+[
+    {
+        "name": "poisson2",
+        "type": "fish",
+        "rarity": "2",
+        "number": "5"
+    },
+    {
+        "name": "poisson3",
+        "type": "fish",
+        "rarity": "2",
+        "number": "5"
+    },
+    {
+        "name": "poisson4",
+        "type": "fish",
+        "rarity": "1",
+        "number": "-1"
+    },
+    {
+        "name": "dechet1",
+        "type": "trash",
+        "rarity": "0",
+        "number": "20"
+    }
+]

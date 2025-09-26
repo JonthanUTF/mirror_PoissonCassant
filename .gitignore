@@ -1,4 +1,34 @@
 # Godot 4+ specific ignores
 .godot/
-/android/
-*.import
+*.import/
+*.translation
+*.mono/
+*.godot/mono/
+*.tmp
+
+# Export / build folders
+bin/
+android/
+ios/
+*.apk
+*.aab
+*.xcarchive
+*.ipa
+
+# Cache / temp files
+.cache/
+logs/
+*.log
+
+# OS-specific ignores
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Optional: ignore user-specific files
+export_presets.cfg

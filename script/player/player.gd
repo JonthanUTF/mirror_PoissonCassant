@@ -3,7 +3,7 @@ extends Node3D
 #fishing var:
 @export var can_fished: bool = false
 @export var fishing: bool = false
-@onready var fish_path : String = ""
+var fish_json : Resource
 @onready var fishing_button = $fishing_button
 @onready var anim_player: AnimationPlayer = $cornichon/AnimationPlayer
 @onready var fishing_rod = $cornichon/'fishing rod'
@@ -12,16 +12,15 @@ extends Node3D
 func _exit_fishing_area() -> void:
 	can_fished = false
 	fishing = false
-	fish_path = ""
+	fish_json = null
 
-func _enter_fishing_area(path : String) -> void:
+func _enter_fishing_area(resource : Resource) -> void:
 	can_fished = true
-	fish_path = path
+	fish_json = resource
 
 func _show_button_fishing() -> void:
-	if can_fished:
-		if !fishing:
-			fishing_button.visible = true
+	if can_fished && !fishing:
+		fishing_button.visible = true
 	else:
 		fishing_button.visible = false
 
