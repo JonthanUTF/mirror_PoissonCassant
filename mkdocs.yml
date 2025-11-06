@@ -1,7 +1,6 @@
 site_name: PoissonCassant Documentation
-site_url: https://ton-utilisateur.github.io/ton-repo/
-repo_url: https://github.com/ton-utilisateur/ton-repo
-repo_name: PoissonCassant
+site_url: https://JonthanUTF.github.io/mirror_PoissonCassant/
+repo_url: https://github.com/JonthanUTF/mirror_PoissonCassant
 
 theme:
   name: material
