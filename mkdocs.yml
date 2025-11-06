@@ -1,0 +1,33 @@
+site_name: PoissonCassant Documentation
+site_url: https://ton-utilisateur.github.io/ton-repo/
+repo_url: https://github.com/ton-utilisateur/ton-repo
+repo_name: PoissonCassant
+
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: teal
+    accent: cyan
+  logo: assets/images/logo-site.png   # place ton logo dans docs/assets/images/
+  favicon: assets/images/favicon.ico
+  features:
+    - navigation.instant
+    - toc.integrate
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - footnotes
+  - def_list
+  - pymdownx.details
+  - pymdownx.superfences
+
+nav:
+  - Accueil: pages/home.md
+  - Documentation: pages/documentation.md
+  - Contribution: pages/contribution.md
+  - Installation: pages/installation.md
+  - Utilisation: pages/usage.md

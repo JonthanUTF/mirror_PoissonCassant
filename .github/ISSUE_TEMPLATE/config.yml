@@ -1,0 +1,9 @@
+# config.yml
+blank_issues_enabled: false
+contact_links:
+  - name: Discussions générales
+    url: https://github.com/JonthanUTF/mirror_PoissonCassant/discussions
+    about: Pose une question ou propose une idée sans créer d’issue
+  - name: 📚 Documentation
+    url: https://mon-site-docs.com
+    about: Consulte la documentation du projet
