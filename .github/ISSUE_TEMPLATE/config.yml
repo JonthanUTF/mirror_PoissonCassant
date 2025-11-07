@@ -4,6 +4,6 @@ contact_links:
   - name: Discussions générales
     url: https://github.com/JonthanUTF/mirror_PoissonCassant/discussions
     about: Pose une question ou propose une idée sans créer d’issue
-  - name: 📚 Documentation
-    url: https://mon-site-docs.com
+  - name: Documentation
+    url: https://jonthanutf.github.io/mirror_PoissonCassant/
     about: Consulte la documentation du projet
