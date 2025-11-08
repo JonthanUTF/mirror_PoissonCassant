@@ -32,3 +32,10 @@ Thumbs.db
 
 # Optional: ignore user-specific files
 export_presets.cfg
+
+node_modules/
+site/
+dist/
+build/
+.cache/
+*.log
