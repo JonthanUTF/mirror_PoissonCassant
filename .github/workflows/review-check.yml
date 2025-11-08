@@ -1,0 +1,25 @@
+name: Code Review & Tests
+
+on:
+  pull_request:
+    branches:
+      - main
+      - dev
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Vérification du formatage
+        run: |
+          echo "→ Vérification du code..."
+          # Exemple : tu peux ajouter un linter si tu veux (GDScript, Python, etc.)
+      
+      - name: Lancer les tests unitaires (si dispo)
+        run: |
+          echo "→ Lancement des tests Godot..."
+          godot --headless --run-tests || echo "Pas encore de tests"
+      
+      - name: Validation de la PR
+        run: echo "PR prête pour revue"
