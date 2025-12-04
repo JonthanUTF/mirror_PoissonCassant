@@ -26,4 +26,13 @@ offset_right = 481.0
 offset_bottom = 1227.0
 text = "start fishing"
 
+[node name="npc_button" type="Button" parent="."]
+offset_left = 261.0
+offset_top = 1175.0
+offset_right = 481.0
+offset_bottom = 1227.0
+text = "talk"
+
 [connection signal="pressed" from="fishing_button" to="." method="_on_fishing_button_pressed"]
+[connection signal="pressed" from="npc_button" to="." method="on_npc_button_pressed"]
+[connection signal="pressed" from="npc_button" to="." method="_on_npc_button_pressed"]

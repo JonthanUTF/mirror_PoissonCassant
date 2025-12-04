@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dm3uedur0ahpo"]
+[gd_scene load_steps=7 format=3 uid="uid://dm3uedur0ahpo"]
 
 [ext_resource type="PackedScene" uid="uid://xnt7d4t8ry36" path="res://scene/map/map.tscn" id="1_o8x4t"]
 [ext_resource type="PackedScene" uid="uid://bm63k3n12r4ne" path="res://scene/player/player.tscn" id="2_geqdq"]
 [ext_resource type="PackedScene" uid="uid://nkcegnpcnh8w" path="res://scene/map/fishing_area.tscn" id="3_6vuhr"]
-[ext_resource type="JSON" path="res://asset/fishing_area/fishing_sheet_test.json" id="4_a0c6e"]
+[ext_resource type="PackedScene" uid="uid://dn6cxlgkaas40" path="res://scene/npc/grethon.tscn" id="4_a0c6e"]
+[ext_resource type="PackedScene" uid="uid://xfiwinkekvs2" path="res://scene/ui/dialogue_bubble.tscn" id="4_qtsyf"]
+[ext_resource type="StyleBox" uid="uid://bk3a6qofqdarq" path="res://asset/dialogues/choice_button_texture.tres" id="6_siuy0"]
 
 [node name="main" type="Node3D"]
 
@@ -18,4 +20,11 @@ shadow_enabled = true
 
 [node name="fishing area" parent="." instance=ExtResource("3_6vuhr")]
 transform = Transform3D(3.5, 0, 0, 0, 0.99026805, -0.2783462, 0, 0.1391731, 1.9805361, 0, 0.2015444, 1.0880101)
-csv_path = ExtResource("4_a0c6e")
+
+[node name="npc" parent="." instance=ExtResource("4_a0c6e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4842937, 1.0999998, -2.1460829)
+choice_stylebox = ExtResource("6_siuy0")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="DialogueBubble" parent="UI" instance=ExtResource("4_qtsyf")]

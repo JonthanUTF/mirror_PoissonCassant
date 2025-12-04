@@ -65,7 +65,7 @@ func exit_npc_area() ->void:
 
 func show_button_talking() -> void:
 	if can_talk and !talking and target_npc:
-			npc_button.visible = true
+		npc_button.visible = true
 	else:
 		npc_button.visible = false
 
