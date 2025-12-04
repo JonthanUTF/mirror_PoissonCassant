@@ -1,26 +1,39 @@
 extends Node3D
 
-#fishing var:
-@export var can_fished: bool = false
+# Fishing related variables
+
+@export var can_fish: bool = false
 @export var fishing: bool = false
-var fish_json : Resource
+
+@onready var fish_path : String = ""
 @onready var fishing_button = $fishing_button
 @onready var anim_player: AnimationPlayer = $cornichon/AnimationPlayer
 @onready var fishing_rod = $cornichon/'fishing rod'
 
-#fishing function:
-func _exit_fishing_area() -> void:
-	can_fished = false
-	fishing = false
-	fish_json = null
+# Npc related variables
 
-func _enter_fishing_area(resource : Resource) -> void:
-	can_fished = true
-	fish_json = resource
+@export var can_talk: bool = false
+@export var talking: bool = false
+
+@onready var npc_button = $npc_button
+
+var target_npc: Node = null
+
+# Fishing related functions
+
+func _exit_fishing_area() -> void:
+	can_fish = false
+	fishing = false
+	fish_path = ""
+
+func _enter_fishing_area(path : String) -> void:
+	can_fish = true
+	fish_path = path
 
 func _show_button_fishing() -> void:
-	if can_fished && !fishing:
-		fishing_button.visible = true
+	if can_fish:
+		if !fishing:
+			fishing_button.visible = true
 	else:
 		fishing_button.visible = false
 
@@ -39,8 +52,33 @@ func _animation_player():
 	else:
 		anim_player.play("idle")
 
+# NPC related functions
+
+func enter_npc_area(npc) -> void:
+	target_npc = npc
+	can_talk = true
+
+func exit_npc_area() ->void:
+	target_npc = null
+	can_talk = false
+	talking = false
+
+func show_button_talking() -> void:
+	if can_talk and !talking and target_npc:
+		npc_button.visible = true
+	else:
+		npc_button.visible = false
+
+func on_npc_button_pressed():
+	if target_npc:
+		target_npc.talk()
+		talking = true
 
 func _process(delta) -> void:
+	# Fishing
 	_show_button_fishing()
 	_animation_player()
 	_show_fishing_rod()
+	
+	# Npc
+	show_button_talking()

@@ -1,0 +1,45 @@
+{
+	"npc_name": "Grethon",
+	"dialogues": [
+		{
+			"id": "intro",
+			"conditions": {
+				"reputation": 0
+			},
+			"text": [
+				"THE FISH OF CORNICHONVILLE ARE DYING !!",
+				"Is it a fishing rod I see in your backpack ? Do you plan on fishing ?!"
+			],
+			"choices": [
+				{
+					"text": "Humm... well why not ?",
+					"next": "poor_fish",
+					"reputation_change": -1
+				},
+				{
+					"text": "Nah, fish are disgusting, yuk!",
+					"next": "fish_danger",
+					"reputation_change": 0
+				}
+			]
+		},
+		{
+			"id": "poor_fish",
+			"conditions": {
+				"reputation": 0
+			},
+			"text": [
+				"I know fishing might seem funny to you, but remember: they are living beings, just like us..."
+			]
+		},
+		{
+			"id": "fish_danger",
+			"conditions": {
+				"reputation": 0
+			},
+			"text": [
+				"Oh okay... Well it's better like that because FISH ARE IN DANGER !! Do not hurt them."
+			]
+		}
+	]
+}

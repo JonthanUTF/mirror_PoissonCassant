@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://xfiwinkekvs2"]
+
+[ext_resource type="Script" uid="uid://iro0rt37jtpb" path="res://script/ui/dialogue_bubble.gd" id="1_jkih3"]
+[ext_resource type="FontFile" uid="uid://cggl70n8a7t7s" path="res://asset/fonts/ComicNeueSansID.ttf" id="2_xradk"]
+
+[node name="DialogueBubble" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jkih3")
+font = ExtResource("2_xradk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 45.0
+offset_top = 980.0
+offset_right = 685.0
+offset_bottom = 1160.0
+grow_horizontal = 2
+grow_vertical = 0
+expand_mode = 1
+stretch_mode = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+offset_left = 85.0
+offset_top = 1015.0
+offset_right = 635.0
+offset_bottom = 1135.0
+
+[node name="Label" type="Label" parent="MarginContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 1160.0
+offset_right = 685.0
+offset_bottom = 1240.0
+theme_override_constants/separation = 12
+alignment = 1
