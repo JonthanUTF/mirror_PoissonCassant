@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbyjpvnhrnueg"]
+
+[ext_resource type="Script" uid="uid://debbu5w3p08dm" path="res://script/utilitaire/npc_area.gd" id="1_qowo0"]
+[ext_resource type="Material" uid="uid://bmj7mexe61mwr" path="res://asset/material/debug_area.tres" id="1_ypy4a"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qowo0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_38ws4"]
+material = ExtResource("1_ypy4a")
+
+[node name="NpcArea" type="Node3D"]
+script = ExtResource("1_qowo0")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_qowo0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
+mesh = SubResource("BoxMesh_38ws4")
